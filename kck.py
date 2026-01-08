@@ -68,7 +68,7 @@ if uploaded_file is not None:
             st.stop()
         
         status_text.text("Tarih formatı dönüştürülüyor...")
-        df['Tarih'] = pd.to_datetime(df['Tarih'], format='%Y/%m', errors='coerce')
+        df['Tarih'] = pd.to_datetime(df['Tarih'], format='%Y-%m', errors='coerce')
         progress_bar.progress(30)
         
         # 1. Mevsimsel İndeks Hesaplama
